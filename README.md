@@ -1,4 +1,4 @@
-# Primality Tests
+# VOS Client
 Try finding divisor of a number using simple division in python. A number is checked against a set of primes from the [Original list of primes](https://primes.utm.edu/lists/small/millions/). There are 40+ such sets. 
 
 ## Where's distributed computing in it?
@@ -27,9 +27,10 @@ primality-tests:
 ```
 
 ## REST API json end-points
-+ Base URL: https://volunteer-computing.firebaseio.com/primality-tests
-+ To download **k**th prime set, ping ```<base>/prime_sets/k/set/.json```
-+ To get the number for **m**th test, ```<base>/testm/number/.json```
++ Base URL: http://volunteer-os.herokuapp.com
++ URL to get the prime state: http://volunteer-os.herokuapp.com/get_state
++ URL to get working URL: http://volunteer-os.herokuapp.com/get_working_url
++ URL to update DB: http://volunteer-os.herokuapp.com/update
 
 ## Server Side Code
 Get the server [code here](https://github.com/AKS1996/VOS-Server). The app is [deployed here](http://volunteer-os.herokuapp.com). The server currently hosts only the OS code, no web interface or GUI at all
