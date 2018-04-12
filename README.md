@@ -5,6 +5,7 @@ Try finding divisor of a number using simple division in python. A number is che
 Since brute force division using millions of divisors(upto 10 digits) takes a lot of time, so we distribute brute force division over a set of computers. Each node downloads a list of primes and tries division. If a factor is found, update the results, else repeat the division with a different set of primes.
 
 ## Database Structure
+```
 primality-tests:  
 |-- prime_sets:  
 |   |-- 1:  
@@ -22,9 +23,13 @@ primality-tests:
 |-- test*k*:  
 |   |-- number:1414053247  
 |   |-- divisor: 37517  
-|   |-- sets_checked: "0,1"  
+|   |-- sets_checked: "0,1" 
+```
 
-# REST API json end-points
+## REST API json end-points
 + Base URL: https://volunteer-computing.firebaseio.com/primality-tests
-+ To download _kth_ prime set, *<base>/prime_sets/k/set/.json*
-+ To get the number for _mth_ test, *<base>/testm/number/.json*
++ To download **k**th prime set, ping ```<base>/prime_sets/k/set/.json```
++ To get the number for **m**th test, ```<base>/testm/number/.json```
+
+## Server Side Code
+Get the server [code here](https://github.com/AKS1996/VOS-Server). The app is [deployed here](http://volunteer-os.herokuapp.com). The server currently hosts only the OS code, no web interface or GUI at all
