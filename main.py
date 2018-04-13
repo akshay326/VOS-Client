@@ -27,7 +27,7 @@ def main():
                 post_divisor(divisor=i,set_number=set_number)
                 print("Divisor "+str(i) +" found for n= "+str(n))
                 found = True
-                break
+                return
 
         if not found:
             post_divisor(divisor=-1,set_number=set_number)
